@@ -1,0 +1,262 @@
+import java.util.Scanner;
+
+import java.lang.Math;
+class U1
+{
+void hai()
+{
+System.out.println(" ");
+}
+
+public static void main(String []args)
+{
+Scanner sc = new Scanner(System.in);
+U1 obj = new U1();
+int i,r=1;
+int op=1,u=1;
+int arr[]=new int[100];
+int add=0, sub=0, mul=1;
+float tan=1,cos=1,loga;
+while (op!=3)
+{
+obj.hai();
+System.out.println("\t \t \t \t ********** MAIN MENU **********");
+System.out.println("\t \t \t \t ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+obj.hai();
+System.out.println("1.NORMAL OPERATIONS 2. TRIGONOMETRIC OPERATIONS 3.EXIT/AC ");
+obj.hai();
+System.out.print("Enter your Option Here : ");
+int option = sc.nextInt();
+op = option;
+switch(option)
+{
+case 1 :
+obj.hai();
+System.out.println("\t \t \t \t \t   NORMAL OPERATIONS : ");
+System.out.println("\t \t \t \t \t =======================");
+while(r!=5)
+{
+obj.hai();
+System.out.println("1. ADDITION OPERATION 2.SUBTRACTION OPERATION 3.MULTIPLICATION OPERATION ");
+obj.hai();
+System.out.println("4. DIVISION OPERATION 5.EXIT/AC");
+obj.hai();
+System.out.print("Enter your choice here: ");
+int choice=sc.nextInt();
+r=choice;
+switch (choice)
+{
+case 1 :
+obj.hai();
+System.out.println("\t  ADDITION OPERATION :> ");
+System.out.println("\t *************************");
+System.out.print("Enter no.of Elements in this operation : ");
+int n = sc.nextInt();
+// Getting input from the User
+for (i=1;i<=n;i++)
+{
+System.out.print("Enter "+ i+" value : ");
+arr[i]=sc.nextInt();
+}
+// Addition
+for(i=1;i<=n;i++)
+{
+add+=arr[i];
+}
+obj.hai();
+System.out.println("\t \t ---------------------- ");
+System.out.println("\t \t  Addition is : "+add); //printing addition
+System.out.println("\t \t ----------------------");
+break;
+case 2 :
+obj.hai();
+System.out.println("\t   SUBTRACTION OPERATION :> ");
+System.out.println("\t *************************** ");
+System.out.print("Enter no.of Elements in this operation : ");
+int l = sc.nextInt();
+for (i=1;i<=l;i++)
+{
+System.out.print("Enter "+i+" value : ");
+arr[i]=sc.nextInt();
+}
+for(i=1;i<=l;i++)
+{
+if(i==1)
+{
+sub=arr[i];
+}
+else
+{
+sub-=arr[i];
+}
+}
+obj.hai();
+System.out.println("\t \t -------------------------- ");
+System.out.println("\t \t   subtraction is : "+sub);
+System.out.println("\t \t -------------------------- ");
+break;
+case 3:
+obj.hai();
+System.out.println("\t  MULTIPLICATION OPERATION :> ");
+System.out.println("\t ***************************** ");
+System.out.print("Enter how many numbers in the operation = ");
+obj.hai();
+int m = sc.nextInt();
+for (i=1;i<=m;i++)
+{
+System.out.print("Enter "+ i+" value : ");
+arr[i]=sc.nextInt();
+}
+for(i=1;i<=m;i++)
+{
+mul*=arr[i];
+}
+obj.hai();
+System.out.println("\t \t ----------------- ");
+System.out.println("\t \t  Mul is = "+mul);
+System.out.println("\t \t -----------------");
+break;
+case 4:
+obj.hai();
+System.out.println("\t   DIVISION OPERATION :>");
+System.out.println("\t ************************ ");
+System.out.print("Enter devident value : ");
+float D=sc.nextFloat();
+System.out.print("Enter divisor value : ");
+float d=sc.nextFloat();
+float di=D/d;
+float re=D%d;
+obj.hai();
+System.out.println("\t \t  ------------------ ");
+System.out.println("\t \t   Quotient = "+di);
+System.out.println("\t \t   Remainder = "+re);
+System.out.println("\t \t  ------------------ ");
+break;
+case 5 :
+System.out.println("YOUR EXITING FROM NORMAL OPERATIONS : ");
+break;
+default :
+System.out.println("RECHECK YOUR OPTIONS PLZ :");
+}
+}
+break;
+case 2 :
+obj.hai();
+System.out.println("\t \t \t \t  TRIGONOMETRIC OPERATIONS  : ");
+System.out.println("\t \t \t \t =============================");
+while(u!=7)
+{
+System.out.println("MENU : ");
+System.out.println("1. POWERS 2. ROOTS  3.Sin 4.Cos 5.Tan");
+System.out.println("6.log 7.EXIT/AC");
+obj.hai();
+System.out.print("Enter your choic here : ");
+int uday = sc.nextInt();
+u=uday;
+switch(uday)
+{
+case 1 :
+obj.hai();
+System.out.println("\t   POWERS :> ");
+System.out.println("\t ************ ");
+System.out.print("Enter Base value : ");
+float base = sc.nextFloat();
+System.out.print("Enter Exponent := ");
+float exp = sc.nextFloat();
+float sqr=1;
+for(i=1;i<=exp;i++)
+{
+sqr*= base;
+}
+obj.hai();
+System.out.println("\t \t ---------------- ");
+System.out.println("\t \t Ans is = "+sqr);
+System.out.println("\t \t ----------------");
+break;
+case 2:
+obj.hai();
+System.out.println("\t Square Roots :>");
+System.out.println("\t *************** ");
+System.out.print("Enter Your input : ");
+float saa = sc.nextFloat();
+float S = (float)Math.sqrt(saa);
+obj.hai();
+System.out.println("\t \t ---------------------- ");
+System.out.println("\t \t  Square Roots : "+S);
+System.out.println("\t \t ---------------------- ");
+break;
+case 3 :
+obj.hai();
+System.out.println("\t Sine Operations :> ");
+System.out.println("\t ******************** ");
+System.out.print("Enter Value to find : ");
+float si = sc.nextFloat();
+float sin = (float)Math.sin(si);
+obj.hai();
+System.out.println("\t \t ------------------------------------- ");
+System.out.println("\t \t Sine value of Give number : "+sin);
+System.out.println("\t \t ------------------------------------- ");
+break;
+case 4 :
+obj.hai();
+System.out.println("\t COSINE OPERATION :> ");
+System.out.println("\t ******************** ");
+System.out.print("Enter Value to find cos : ");
+float co = sc.nextFloat();
+cos = (float)Math.cos(co);
+obj.hai();
+System.out.println("\t \t -------------------------- ");
+System.out.println("\t \t  cosine value is : "+cos);
+System.out.println("\t \t --------------------------- ");
+break;
+case 5 :
+obj.hai();
+System.out.println("\t  TAN OPERATION :> ");
+System.out.println("\t ***************** ");
+System.out.print("Enter Value to find tan  : ");
+float  ta = sc.nextFloat();
+tan = (float)Math.tan(tan);
+obj.hai();
+System.out.println("\t \t --------------------------- ");
+System.out.println("\t \t  cosine value is : "+tan);
+System.out.println("\t \t --------------------------- ");
+break;
+case 6 :
+obj.hai();
+System.out.println("\t  LOGARITHMIC OPERATION :>");
+System.out.println("\t *************************** ");
+System.out.println("Enter Your values here : ");
+float l = sc.nextFloat();
+loga = (float)Math.log(l);
+obj.hai();
+System.out.println("\t \t --------------------------------------- ");
+System.out.println("\t \t  LOGARITHMIC value of Given : "+loga);
+System.out.println("\t \t ---------------------------------------- ");
+break;
+case 7:
+System.out.println("Exiting trignomertic operations ");
+break;
+default :
+System.out.println("RECHECK YOUR OPTIONS PLZ = ");
+}
+
+}
+break;
+case 3:
+obj.hai();
+System.out.println("\t \t \t \t --------Thanking you-------");
+obj.hai();
+System.out.println("\t \t \t \t Bhargavi BCA(Data Science) ");
+System.out.println("\t \t \t \t Ravi TEja BCA(Data Science) ");
+System.out.println("\t \t \t \t Uday Sai BCA(Data Science) ");
+System.out.println("\t \t \t \t Sanjay BCA(Data Science) ");
+obj.hai();
+System.out.println("\t \t \t \t ----------Exiting----------");
+obj.hai();
+break;
+default :
+System.out.println("RECHECK YOUR OPTIONS PLZ = ");
+}
+}
+}
+}
